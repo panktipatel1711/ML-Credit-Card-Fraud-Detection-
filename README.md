@@ -1,16 +1,30 @@
-# 🛡️ Credit Card Fraud Detection System
+# 💳 Credit Card Fraud Detection System
 
-An end-to-end Machine Learning pipeline to detect fraudulent transactions with high precision and recall.
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
+![Machine Learning](https://img.shields.io/badge/ML-Random%20Forest-green.svg)
+![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
-## 🚀 Key Features
-- **Imbalance Handling:** Used SMOTE to balance the dataset.
-- **High Performance:** Implemented XGBoost for robust classification[cite: 1].
-- **Real-time API:** Deployed using FastAPI for instant scoring[cite: 1].
-- **Modular Code:** Professional folder structure for scalability[cite: 1].
+## 📌 Project Overview
+This project implements a robust **AI-Powered Fraud Detection System** designed to identify fraudulent credit card transactions. Using a Random Forest Classifier, the system achieves high precision in detecting anomalies within highly imbalanced financial datasets.
 
-## 🛠️ Tech Stack
-- Python, Scikit-learn, XGBoost, FastAPI, Joblib[cite: 1].
+## 🏗️ System Architecture
+The system follows a standard data science pipeline from ingestion to deployment:
+![System Architecture](images/architecture_diag.png)
 
-## 📊 Results
-- **Recall:** 92% (Crucial for catching fraud)[cite: 1].
-- **Precision:** 88% (Reducing false alarms)[cite: 1].
+## 📊 Model Performance
+To ensure reliability, the model was evaluated using a Confusion Matrix, focusing on minimizing False Negatives (missed fraud cases).
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Key Metrics:
+- **Algorithm:** Random Forest Classifier
+- **Features:** PCA-transformed transaction features
+- **Handling Imbalance:** Tested with SMOTE/Standard Scaling
+
+## 📂 Project Structure
+```text
+├── data/               # Raw and processed datasets
+├── images/             # System architecture and performance plots
+├── models/             # Serialized .joblib model and scaler files
+├── notebooks/          # Modularized research and training steps
+├── app.py              # Streamlit Dashboard interface
+└── requirements.txt    # Project dependencies
